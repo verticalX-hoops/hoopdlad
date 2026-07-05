@@ -1,30 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Basket Web</title>
+<title>VerticalX Hoops</title>
+<style>
+body{
+font-family:Arial;
+text-align:center;
+background:#f5f5f5;
+padding:30px;
+}
+
+h1{
+color:#ff6600;
+}
+
+input{
+padding:10px;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+cursor:pointer;
+}
+</style>
 </head>
+
 <body>
-    <h1>🏀 Basket Web</h1>
 
-    <h2>Calculadora de salto vertical</h2>
+<h1>🏀 VerticalX Hoops</h1>
 
-    <input id="salto" placeholder="Tu salto en cm">
-    <button onclick="calcular()">Calcular</button>
+<h2>Calculadora de salto vertical</h2>
 
-    <p id="resultado"></p>
+<input id="salto" type="number" placeholder="Salto en cm">
 
-    <script>
-        function calcular() {
-            let salto = document.getElementById("salto").value;
+<br>
 
-            if(salto >= 80){
-                document.getElementById("resultado").innerHTML =
-                "¡Nivel excelente para mates!";
-            }else{
-                document.getElementById("resultado").innerHTML =
-                "Sigue entrenando para mejorar tu salto.";
-            }
-        }
-    </script>
+<button onclick="calcular()">
+Calcular
+</button>
+
+<h3 id="resultado"></h3>
+
+<script>
+function calcular(){
+
+let salto =
+document.getElementById("salto").value;
+
+if(salto >= 80){
+document.getElementById("resultado").innerHTML =
+"🔥 Nivel excelente para mates";
+}
+else if(salto >= 65){
+document.getElementById("resultado").innerHTML =
+"🏀 Muy cerca de hacer mates";
+}
+else{
+document.getElementById("resultado").innerHTML =
+"💪 Sigue entrenando tu salto";
+}
+}
+</script>
+
 </body>
 </html>
