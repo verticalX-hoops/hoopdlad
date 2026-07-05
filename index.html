@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basket Web</title>
+</head>
+<body>
+    <h1>🏀 Basket Web</h1>
+
+    <h2>Calculadora de salto vertical</h2>
+
+    <input id="salto" placeholder="Tu salto en cm">
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            let salto = document.getElementById("salto").value;
+
+            if(salto >= 80){
+                document.getElementById("resultado").innerHTML =
+                "¡Nivel excelente para mates!";
+            }else{
+                document.getElementById("resultado").innerHTML =
+                "Sigue entrenando para mejorar tu salto.";
+            }
+        }
+    </script>
+</body>
+</html>
